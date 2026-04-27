@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الأول</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            transition: background 0.5s ease;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00c6ff;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0072ff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🚀 أهلاً وسهلاً</h1>
+        <p>أنا محمد أتعلم البرمجة والكلاود</p>
+
+        <button onclick="changeColor()">غيّر الخلفية</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            const colors = [
+                "linear-gradient(to right, #ff7e5f, #feb47b)",
+                "linear-gradient(to right, #43cea2, #185a9d)",
+                "linear-gradient(to right, #ff512f, #dd2476)",
+                "linear-gradient(to right, #00c6ff, #0072ff)"
+            ];
+
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.background = randomColor;
+        }
+    </script>
+
+</body>
+</html>
